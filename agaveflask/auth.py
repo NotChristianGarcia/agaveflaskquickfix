@@ -151,9 +151,9 @@ def get_api_server(tenant_name):
     if tenant_name.upper() == 'DESIGNSAFE':
         return 'https://agave.designsafe-ci.org'
     if tenant_name.upper() == 'DEV-STAGING':
-        return 'https://dev.tenants.staging.tacc.cloud'
+        return 'https://dev.tenants.aloestaging.tacc.cloud'
     if tenant_name.upper() == 'DEV-DEVELOP':
-        return 'https://dev.tenants.develop.tacc.cloud'
+        return 'https://dev.tenants.aloestaging.tacc.cloud'
     if tenant_name.upper() == 'IPLANTC-ORG':
         return 'https://agave.iplantc.org'
     if tenant_name.upper() == 'IREC':
