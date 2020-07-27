@@ -144,6 +144,8 @@ def check_jwt(jwt_header_name, jwt_header, tenant_name, req):
 
 def get_api_server(tenant_name):
     # todo - lookup tenant in tenants table
+    if tenant_name.upper() == '3DEM':
+        return 'https://api.3dem.org'
     if tenant_name.upper() == 'AGAVE-PROD':
         return 'https://public.agaveapi.co'
     if tenant_name.upper() == 'ARAPORT-ORG':
@@ -152,12 +154,16 @@ def get_api_server(tenant_name):
         return 'https://agave.designsafe-ci.org'
     if tenant_name.upper() == 'DEV-STAGING':
         return 'https://dev.tenants.aloestaging.tacc.cloud'
-    if tenant_name.upper() == 'DEV-DEVELOP':
+    if tenant_name.upper() == 'DEV':
         return 'https://dev.tenants.aloestaging.tacc.cloud'
+    if tenant_name.upper() == 'DEV-DEVELOP':
+        return 'https://dev.tenants.aloedev.tacc.cloud'
     if tenant_name.upper() == 'IPLANTC-ORG':
         return 'https://agave.iplantc.org'
     if tenant_name.upper() == 'IREC':
         return 'https://irec.tenants.prod.tacc.cloud'
+    if tenant_name.upper() == 'PORTALS':
+        return 'https://portals-api.tacc.utexas.edu'
     if tenant_name.upper() == 'TACC-PROD':
         return 'https://api.tacc.utexas.edu'
     if tenant_name.upper() == 'SD2E':
