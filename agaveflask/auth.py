@@ -166,6 +166,8 @@ def get_api_server(tenant_name):
         return 'https://portals-api.tacc.utexas.edu'
     if tenant_name.upper() == 'TACC-PROD':
         return 'https://api.tacc.utexas.edu'
+    if tenant_name.upper() == 'A2CPS':
+        return 'https://api.a2cps.org'
     if tenant_name.upper() == 'SD2E':
         return 'https://api.sd2e.org'
     if tenant_name.upper() == 'SGCI':
